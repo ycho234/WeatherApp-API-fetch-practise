@@ -24,6 +24,10 @@ async function getWeather() {
   const temperature = data.current_weather.temperature;
   tempLondon.textContent = temperature;
   console.log(data.current_weather.temperature);
-}
 
+  const timeLondon = document.getElementById("timeText");
+  const time = data.current_weather.time;
+  timeLondon.textContent = time;
+  console.log(data.current_weather.time);
+}
 getWeather();
