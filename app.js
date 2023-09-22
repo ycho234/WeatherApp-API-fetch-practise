@@ -31,3 +31,11 @@ async function getWeather() {
   console.log(data.current_weather.time);
 }
 getWeather();
+
+// making button work
+const button = document.getElementById("weatherButton");
+button.addEventListener("click", function () {
+  window.location.href = "https://www.bbc.com/weather/2643743";
+});
+
+console.log(document.addEventListener("DOMContentLoaded", getWeather));
