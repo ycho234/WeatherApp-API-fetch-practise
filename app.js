@@ -24,7 +24,7 @@ async function getWeather() {
 //weather object 
   const data = await response.json();
   console.log(typeof data, data);
-  
+
 //Temperature display
   const tempLondon = document.getElementById("temperatureText");
   const temperature = data.current_weather.temperature;
