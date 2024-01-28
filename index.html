@@ -3,19 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&family=Nunito&display=swap"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather</title>
+    <title>WeatherApp</title>
   </head>
   <body>
-    <h1>🌦️DAILY WEATHER🌦️</h1>
-    <div id="weatherDiv">
-      <p id="location">📍Location: London GMT</p>
-      <p class="temperature">
-        🌡️ Temperature: <span id="temperatureText">Loading...</span>
-      </p>
-      <p class="time">🕛Date & Time: <span id="timeText">Loading...</span></p>
+    <div id="container">
+      <h1 id="title">DAILY WEATHER</h1>
+      <img id="weatherIcon" src="weather.png" alt="weather icon" />
+      <div id="weatherDiv">
+        <p class="data">📍Location: London GMT</p>
+        <p class="data">
+          🌡️ Temperature : <span id="temperatureText">Loading...</span
+          ><span id="unitText">Loading...</span>
+        </p>
+        <p class="data">🕛Date & Time: <span id="timeText">Loading...</span></p>
+      </div>
+      <div id="buttonDiv">
+        <button id="unitButton">Change to °F </button>
+        <button id="modeButton">Dark Mode</button>
     </div>
-    <button id="weatherButton" type="button">Weekly Weather</button>
     <script src="app.js"></script>
   </body>
 </html>
