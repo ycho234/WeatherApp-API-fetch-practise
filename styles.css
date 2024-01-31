@@ -4,7 +4,7 @@ body {
   font-family: Nunito, sans-serif;
 }
 #container {
-  background-image: linear-gradient(to top right, #95c5ce, #3782ad);
+  background: linear-gradient(to top right, #95c5ce, #3782ad);
   width: 500px; /* Set the width and height to make it square */
   height: 500px;
   margin-left: auto;

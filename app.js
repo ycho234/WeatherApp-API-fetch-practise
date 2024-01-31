@@ -74,36 +74,32 @@ async function changeUnit() {
 changeUnit();
 
 async function changeMode() {
-  // select the id of the elements working with
-  // the button, trigger event when clicked
-  // change the colour of the body
-  // change the colour of the container
-  // change the colour of the buttons
   const mode = document.getElementById("modeButton");
   const body = document.getElementById("body");
   const container = document.getElementById("container");
-  // add an event listener
+
   mode.addEventListener("click", async function () {
-    // Get the computed style of the body
     const bodyStyle = getComputedStyle(body);
-    // this give the object from the getComputedstyle
+
     console.log(bodyStyle);
-    // if the body is white
+
     if (
       bodyStyle.backgroundColor === "rgb(255, 255, 255)" ||
       bodyStyle.backgroundColor === "#ffffff"
     ) {
-      body.style.backgroundColor = "#000000";
+      body.style.background = "#192125";
       mode.textContent = "Light Mode";
+      container.style.background =
+        "linear-gradient(to top right, #424546, #04283c";
     } else if (
-      bodyStyle.backgroundColor === "rgb(0, 0, 0)" ||
-      bodyStyle.backgroundColor === "#000000"
+      bodyStyle.backgroundColor === "rgb(25, 33, 37)" ||
+      bodyStyle.backgroundColor === "#192125"
     ) {
       body.style.backgroundColor = "#ffffff";
       mode.textContent = "Dark Mode";
+      container.style.background =
+        "linear-gradient(to top right, #95c5ce, #3782ad)";
     }
-    // conditions: make the body black, make the container dark grey, make the buttons black
-    // else keep them the original colour
   });
 }
 
